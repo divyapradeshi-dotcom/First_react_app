@@ -38,7 +38,7 @@ import Spinner from "./components/Spinner";
 
 import MovieCard from "./components/MovieCard";
 import { useDebounce } from "react-use";
-import { getTrendingMovies, updateSearchCount } from "./appwrite";
+import { getTrendingMovies, updateSearchCount } from "../appwrite";
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -139,8 +139,7 @@ const App = () => {
           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </header>
        
-      
-{ /* {trendingMovies.length > 0 && (
+       {trendingMovies.length > 0 && (
   <section className="treding">
     <h2>Trending Movies</h2>
 
@@ -153,7 +152,7 @@ const App = () => {
       ))}
     </ul>
   </section>
-)} */}
+)} 
 
 
         <section className="all-movies">
